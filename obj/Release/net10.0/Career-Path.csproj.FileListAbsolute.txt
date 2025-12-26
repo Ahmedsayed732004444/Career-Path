@@ -220,3 +220,4 @@ C:\Users\AIO\source\repos\Career-Path\Career-Path\obj\Release\net10.0\refint\Car
 C:\Users\AIO\source\repos\Career-Path\Career-Path\obj\Release\net10.0\Career-Path.pdb
 C:\Users\AIO\source\repos\Career-Path\Career-Path\obj\Release\net10.0\Career-Path.genruntimeconfig.cache
 C:\Users\AIO\source\repos\Career-Path\Career-Path\obj\Release\net10.0\ref\Career-Path.dll
+C:\Users\AIO\source\repos\Career-Path\Career-Path\bin\Release\net10.0\Career-Path.staticwebassets.runtime.json

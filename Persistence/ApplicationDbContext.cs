@@ -5,9 +5,12 @@ namespace Career_Path.Persistence;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) :
     IdentityDbContext<ApplicationUser, ApplicationRole, string>(options)
+
 {
 
-
+    public DbSet<UserProfile> UserProfiles { get; set; } = null!;
+    public DbSet<SoftSkill> SoftSkills { get; set; } = null!;
+    public DbSet<HardSkill> HardSkills { get; set; } = null!;
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

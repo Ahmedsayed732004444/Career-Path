@@ -34,4 +34,10 @@ public record UserErrors
 
     public static readonly Error InvalidRoles =
         new("Role.InvalidRoles", "Invalid roles", StatusCodes.Status400BadRequest);
+    public static readonly Error DuplicateProfile =
+        new("User.DuplicateProfile", "User profile already exists", StatusCodes.Status409Conflict);
+    public static readonly Error ProfileNotFound =
+        new("User.ProfileNotFound", "User profile not found", StatusCodes.Status404NotFound);
+    public static readonly Error FileNotFound =
+        new("User.FileNotFound", "File not found", StatusCodes.Status404NotFound);
 }

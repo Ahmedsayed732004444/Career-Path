@@ -18,6 +18,7 @@ var app = builder.Build();
     app.UseSwaggerUI(options => { options.SwaggerEndpoint("/openapi/v1.json", "careerPath V1"); });
 //}
 app.UseCors();
+app.UseAuthentication();
 app.UseAuthorization();
 app.UseHttpsRedirection();
 app.MapControllers();

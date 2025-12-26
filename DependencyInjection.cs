@@ -31,6 +31,7 @@ namespace Career_Path
                    );
 
             services.AddAuthConfig(configuration);
+            services.AddHttpContextAccessor();
 
             var connectionString = configuration.GetConnectionString("DefaultConnection") ??
                 throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -41,11 +42,13 @@ namespace Career_Path
             services
                 .AddMapsterConfig()
                 .AddFluentValidationConfig();
+            
 
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailSender, EmailService>();
+            services.AddScoped<IUserProfileService, UserProfileService>();
 
-            services.AddHttpContextAccessor();
+           
 
             services.AddOptions<MailSettings>()
                 .BindConfiguration(nameof(MailSettings))
